@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function toNumber(x) {
     let num = Number(x);
     if (isNaN(num)) {
@@ -43,4 +41,5 @@ console.log(add("3", 5));
 console.log(integrate("5", 0));
 console.log((except("abc", "7")));
 console.log(division("6", 0));
+export {};
 //# sourceMappingURL=Bai_08.js.map

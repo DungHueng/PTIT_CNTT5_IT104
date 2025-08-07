@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let str = "banana";
 let str2 = [];
 for (let i = 0; i < str.length; i++) {
@@ -8,4 +6,5 @@ for (let i = 0; i < str.length; i++) {
     }
 }
 console.log(str2.join(""));
+export {};
 //# sourceMappingURL=Bai_07.js.map
