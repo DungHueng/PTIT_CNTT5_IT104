@@ -1,34 +1,34 @@
 class Book {
-    private title: string;
-    private author: string;
-    constructor(title: string, author: string) {
-        this.title = title,
-            this.author = author
-    }
-    getTitle() {
-        return this.title;
-    }
-    getAuthor() {
-        return this.author;
-    }
-    setTitle(title: string) {
-        return this.title = title;
-    }
-    setAuthor(author: string) {
-        return this.author = author;
-    }
+  private title: string;
+  private author: string;
+  constructor(title: string, author: string) {
+    this.title = title;
+    this.author = author;
+  }
+  getTitle() {
+    return this.title;
+  }
+  getAuthor() {
+    return this.author;
+  }
+  setTitle(title: string) {
+    return (this.title = title);
+  }
+  setAuthor(author: string) {
+    return (this.author = author);
+  }
 }
 
 class Library {
-    books: Book[] = [];
-    addBook(book: Book) {
-        this.books.push(book);
+  books: Book[] = [];
+  addBook(book: Book) {
+    this.books.push(book);
+  }
+  printBook() {
+    for (const book of this.books) {
+      console.log(`Ten: ${book.getTitle()} Ten tac gia: ${book.getAuthor()}`);
     }
-    printBook() {
-        for (const book of this.books) {
-            console.log(`Ten: ${book.getTitle()}  Ten tac gia :${book.getAuthor()}`);
-        }
-    }
+  }
 }
 
 let book1 = new Book("Dragon ball", "Akira Toriyama");
