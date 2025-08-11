@@ -35,10 +35,12 @@ let book1 = new Book("Dragon ball", "Akira Toriyama");
 let book2 = new Book("One piece", "Eiichiro Oda");
 let book3 = new Book("Naruto", "Masashi Kishimoto");
 let book4 = new Book("JOJO", "Hirohiko Araki");
+let book5 = new Book("Attack on Titan", "Hajime Isayama");
 let library = new Library();
 
 library.addBook(book1);
 library.addBook(book2);
 library.addBook(book3);
 library.addBook(book4);
+library.addBook(book5);
 library.printBook();
