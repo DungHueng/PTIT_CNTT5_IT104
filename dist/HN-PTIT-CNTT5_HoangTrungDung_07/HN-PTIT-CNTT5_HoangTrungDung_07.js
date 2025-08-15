@@ -171,9 +171,31 @@ function mainMenu() {
             case "2":
                 const type = prompt("Nhập phương tiện: ") || "";
                 const rentalPricePerDay = Number(prompt("Nhập giá thuê: "));
-                rentalChoice.addVehices(new Car(rentalChoice.vehices.length + 1, type, rentalPricePerDay, true));
+                if (type === "Car") {
+                    rentalChoice.addVehices(new Car(rentalChoice.vehices.length + 1, type, rentalPricePerDay, true));
+                }
+                else if (type === "Motorcycle") {
+                    rentalChoice.addVehices(new Motorcycle(rentalChoice.vehices.length + 1, type, rentalPricePerDay, true));
+                }
+                else if (type === "Truck") {
+                    rentalChoice.addVehices(new Truck(rentalChoice.vehices.length + 1, type, rentalPricePerDay, true));
+                }
+                else {
+                    console.log("Loại phương tiện không hợp lệ");
+                }
                 break;
             case "3":
+                const customerId = Number(prompt("Nhập ID khách hàng: "));
+                const vehiceIdRent = Number(prompt("Nhập ID phương tiện: "));
+                const days = Number(prompt("Nhập số ngày thuê: "));
+                const rental = rentalChoice.rentVehice(customerId, vehiceIdRent, days);
+                if (rental) {
+                    console.log("Thuê xe thành công");
+                    console.log(rental.getDetails());
+                }
+                else {
+                    console.log("Thuê xe thất bại");
+                }
                 break;
             case "4":
                 break;
