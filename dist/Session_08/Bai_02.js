@@ -7,7 +7,7 @@ class choice {
     }
 }
 const choose = new choice("Xin chào", true);
-if (choose instanceof choice) {
+if (choose.success) {
     console.log("Xin chào");
 }
 else {
