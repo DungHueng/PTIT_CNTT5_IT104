@@ -25,6 +25,7 @@
 }
 
 .main {
+  width: 1300px;
   flex: 1;
   background-color: white;
   display: flex;
