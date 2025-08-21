@@ -25,3 +25,5 @@ const ChildComp: React.FC<ChildCompProps> = ({
 };
 
 export default ChildComp;
+
+// FC là viết tắt của Functional Component, dùng để khai báo kiểu cho component React

@@ -3,7 +3,7 @@
 // import { Table as Exercise03 } from "./Components/Exercise03";
 // import { Parent_Comp } from "./Components/Bai_04/Parent_Comp";
 // import { Product } from "./Components/Bai_05/Product";
-import ListPost from "./Components/Bai_06/ListPost";
+import Demo from "./Components/Bai_06/Demo";
 function App() {
 
   return (
@@ -13,7 +13,7 @@ function App() {
       {/* <Information /> */}
       {/* <Exercise03 /> */}
       {/* <Product /> */}
-      <ListPost />
+      <Demo />
     </>
   )
 }

@@ -31,3 +31,5 @@ export class Product extends Component<object, ProductProps> {
     );
   }
 }
+
+// Dùng {} thì TypeScript cho phép nhiều kiểu hơn object
