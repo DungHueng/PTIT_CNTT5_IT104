@@ -39,7 +39,7 @@ export default function InputRadio() {
           <input type="radio" name="gender" value="Khác" onChange={handleChange} />
           Khác
         </label>
-        <p>Select gender: {state.value}</p>
+        <p>Selected gender: {state.value}</p>
       </form>
     </div>
   )
