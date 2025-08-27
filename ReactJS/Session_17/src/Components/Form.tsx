@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 export default function Form() {
-const [form, setForm] = useState<string>("");
+const [form, setForm] = useState("");
 const changeForm=(event: React.ChangeEvent<HTMLInputElement>)=>{
     setForm(event.target.value);
 }
