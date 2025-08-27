@@ -5,8 +5,8 @@ import './App.css'
 // import ChangeColor from '../src/Components/ChangeColor'
 // import Toggle from './Components/Toggle'
 // import Select from './Components/Select'
-// import Form from './Components/Form'
-import CounText from './Components/CounText'
+import Form from './Components/Form'
+// import CounText from './Components/CounText'
 
 function App() {
 
@@ -16,8 +16,8 @@ function App() {
       {/* <Bai_02 /> */}
       {/* <ChangeColor /> */}
       {/* <Toggle /> */}
-      {/* <Form /> */}
-      <CounText />
+      <Form />
+      {/* <CounText /> */}
       {/* <Select /> */}
     </>
   )
