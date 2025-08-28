@@ -1,4 +1,4 @@
-import React from 'react'
+import { useReducer } from 'react'
 
 interface genderSelectProps {
     value: string;
@@ -16,7 +16,7 @@ function reducer(state: genderSelectProps, action: Action): genderSelectProps {
 }
 
 export default function InputRadio() {
-  const [state, dispatch] = React.useReducer(reducer, {value: ''})
+  const [state, dispatch] = useReducer(reducer, {value: ''})
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({type: 'genderChange', payload: event.target.value})
@@ -39,7 +39,7 @@ export default function InputRadio() {
           <input type="radio" name="gender" value="Khác" onChange={handleChange} />
           Khác
         </label>
-        <p>Select gender: {state.value}</p>
+        <p>Selected gender: {state.value}</p>
       </form>
     </div>
   )
