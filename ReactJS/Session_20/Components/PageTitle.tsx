@@ -5,7 +5,7 @@ export default function PageTitle() {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setValue(e.target.value);
     }
-    useEffect(() => {document.title = value});
+    useEffect(() => {document.title = `Chào, ${value}`});
 
   return (
     <div>
