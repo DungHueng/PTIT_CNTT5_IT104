@@ -1,35 +1,71 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react"
+import Footer from "../src/Components/Footer"
+import Input from "../src/Components/Input"
+import Item from "../src/Components/Item"
+import Title from "../src/Components/Title"
+import { type Todo } from "../src/types/todoTypes"
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
+  //Quản lý được input của người dùng
+  //Tạo state để chứa input
+  const [inputTodo, setInputTodo] = useState("")
+  //Khởi tạo state quản lý 1 mảng công việc
+  let [todos, setTodos] = useState<Todo[]>([])
+  //Lấy dữ liệu từ localstorage khi vào trình duyệt
+  useEffect(() => {
+    todos = JSON.parse(localStorage.getItem("todos") || "[]")
+    setTodos(todos)
+  }, [])
+  //Hàm đặt lại state theo giá trị input
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputTodo(e.target.value)
+  }
+  //Quản lý danh sách công việc
+  //Xây dựng hàm thêm mới công việc
+  function addTodo() {
+    let newTodo: Todo = {
+      id: Date.now(),
+      content: inputTodo,
+      isDone: false
+    }
+    todos.push(newTodo);
+    setTodos([...todos])
+    localStorage.setItem("todos", JSON.stringify(todos))
+  }
+  //Hàm đánh dấu công việc hoàn thành
+  function toggleTodo(id: number) {
+    todos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, isDone: !todo.isDone }
+      }
+      return todo
+    })
+    setTodos(todos)
+    localStorage.setItem("todos", JSON.stringify(todos))
+  }
+  //Hàm xóa công việc
+  function deleteTodo(id: number) {
+    todos = todos.filter((todo) => todo.id !== id)
+    setTodos(todos)
+    localStorage.setItem("todos", JSON.stringify(todos))
+  }
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="container todo-container">
+      <Title></Title>
+      <Input input={inputTodo} handleChange={handleChange} addTodo={addTodo}></Input>
+      <ul className="list-group my-3">
+        {/* Tasks sẽ được thêm ở đây */}
+        {todos.map((todo) => {
+          return <Item key={todo.id}
+            content={todo.content}
+            isDone={todo.isDone}
+            id={todo.id}
+            toggleTodo={toggleTodo}
+            deleteTodo={deleteTodo}></Item>
+        })}
+      </ul>
+      <Footer todos = {todos}></Footer>
+    </div>
+
   )
 }
-
-export default App
