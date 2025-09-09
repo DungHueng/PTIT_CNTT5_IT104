@@ -7,7 +7,7 @@ function calculation(){
     const y = 10;
     return(
         <div>
-            <h1>Danh sách kết quả</h1>
+            <h1>Danh sách kết quả:</h1>
             <ul>
                 <li>{x} + {y} = {add(x, y)}</li>
                 <li>{x} - {y} = {substract(x, y)}</li>
