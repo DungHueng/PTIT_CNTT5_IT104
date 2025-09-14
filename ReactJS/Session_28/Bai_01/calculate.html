@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        function caculate(a, b, CallBack) {
+            const result = a + b;
+            CallBack(result);
+        }
+
+        function callbackCaculate(result) {
+            console.log("Kết quả là ", result);
+        }
+
+        caculate(5, 10, callbackCaculate);
+    </script>
+  </body>
+</html>
