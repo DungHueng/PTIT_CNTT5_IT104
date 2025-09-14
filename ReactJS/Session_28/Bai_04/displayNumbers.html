@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function displayNumbers(callback, n) {
+            let i = 1;
+            setInterval(() => {
+                callback(i);
+                i++;
+            }, n);
+        }
+        function callbackFunction(i) {
+            console.log(`Số thứ tự: ${i}`);
+        }
+        displayNumbers(callbackFunction, 1000);
+    </script>
+</body>
+</html>
