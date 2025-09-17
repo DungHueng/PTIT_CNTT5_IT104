@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "product_name": "Chuột Gaming",
+      "image": "https://example.com/images/chuot-gaming.jpg",
+      "price": 450000,
+      "quantity": 15,
+      "created_at": "2025-09-11T09:00:00Z"
+    },
+    {
+      "id": "3",
+      "product_name": "Bàn phím cơ",
+      "image": "https://example.com/images/ban-phim-co.jpg",
+      "price": 1200000,
+      "quantity": 10,
+      "created_at": "2025-09-12T14:15:00Z"
+    },
+    {
+      "id": "4",
+      "product_name": "Màn hình 24 inch",
+      "image": "https://example.com/images/man-hinh-24.jpg",
+      "price": 3200000,
+      "quantity": 8,
+      "created_at": "2025-09-13T16:45:00Z"
+    },
+    {
+      "id": "5",
+      "product_name": "Ổ cứng SSD 512GB",
+      "image": "https://example.com/images/ssd-512.jpg",
+      "price": 1500000,
+      "quantity": 25,
+      "created_at": "2025-09-14T19:20:00Z"
+    }
+  ]
+}

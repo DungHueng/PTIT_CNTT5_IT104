@@ -1,0 +1,19 @@
+{
+  "jobs": [
+    {
+      "id": "1",
+      "taskName": "Quét nhà",
+      "status": false
+    },
+    {
+      "id": "2",
+      "taskName": "Giặt quần áo",
+      "status": false
+    },
+    {
+      "id": "3",
+      "taskName": "Nấu cơm",
+      "status": false
+    }
+  ]
+}
